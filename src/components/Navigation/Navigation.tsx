@@ -11,9 +11,9 @@ export const Navigation: React.FC = () => {
 
     return (
         <nav className='navigation'>
-            <Link className='navigation-logo' to='/'>
+            {/* <Link className='navigation-logo' to='/'> */}
                 <Logo />
-            </Link>
+            {/* </Link> */}
             <div className='navigation-links'>
                 <Link className='projects-list_link' to={'/ProjectsList'}>
                     Projects
