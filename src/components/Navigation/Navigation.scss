@@ -1,0 +1,14 @@
+.navigation {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    & a {
+      line-height: 5vh;
+    }
+  }
+}

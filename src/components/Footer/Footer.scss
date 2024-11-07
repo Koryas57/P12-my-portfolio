@@ -1,0 +1,45 @@
+.footer {
+  background-color: #00000063;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.socialLinks {
+  margin-top: 20px;
+}
+
+.link {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
