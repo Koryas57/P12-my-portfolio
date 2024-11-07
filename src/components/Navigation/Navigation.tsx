@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.scss'
-import { Logo } from './Logo/Logo';
 
 export const Navigation: React.FC = () => {
 
@@ -11,9 +10,6 @@ export const Navigation: React.FC = () => {
 
     return (
         <nav className='navigation'>
-            {/* <Link className='navigation-logo' to='/'> */}
-                <Logo />
-            {/* </Link> */}
             <div className='navigation-links'>
                 <Link className='projects-list_link' to={'/ProjectsList'}>
                     Projects
