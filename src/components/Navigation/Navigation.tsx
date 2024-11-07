@@ -12,17 +12,14 @@ export const Navigation: React.FC = () => {
     return (
         <nav className='navigation'>
             <Link className='navigation-logo' to='/'>
-            <div style={{ display: 'flex', background: 'black', alignItems: 'flex-start', padding: '10px' }}>
-      <Logo />
-      {/* Autres composants de l'application */}
-    </div>
+                <Logo />
             </Link>
             <div className='navigation-links'>
                 <Link className='projects-list_link' to={'/ProjectsList'}>
-                    Voir la liste des projets
+                    Projects
                 </Link>
                 <Link className='skills-list_link' to={'/Skills'}>
-                    Voir la liste des compétences
+                    Skills details
                 </Link>
             </div>
         </nav>
