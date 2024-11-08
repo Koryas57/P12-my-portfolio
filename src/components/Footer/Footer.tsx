@@ -35,7 +35,6 @@ export const Footer: React.FC = () => {
           />
         ))}
       </div>
-      <p className="text">Technologies maîtrisées</p>
       <div className="socialLinks">
         <a href="https://github.com/tonprofil" target="_blank" rel="noopener noreferrer" className="link">
           GitHub

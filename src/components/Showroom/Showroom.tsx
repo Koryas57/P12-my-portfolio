@@ -109,7 +109,10 @@ export const Showroom: React.FC<ModelViewerModalProps> = ({ isOpen, onClose }) =
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose}>Quitter le Showroom</button>
+        <div className='modal-content-banner'>
+          <h1>Showroom Jaguar</h1>
+          <button onClick={onClose}>Quitter le Showroom</button>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 .footer {
-  background-color: #00000063;
+  background: rgb(42, 42, 42);
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -16,18 +16,18 @@
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s;
+  width: 50px;
+  height: 50px;
+  margin-left: 2vw;
+  box-shadow: 0 0 10px white;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  border: transparent;
 
   &:hover {
-    transform: scale(1.2);
+    box-shadow: 0 0 8px 3px white;
+    transform: rotateZ(1turn) scale(1.2);
   }
-}
-
-.text {
-  margin-top: 10px;
-  font-size: 14px;
 }
 
 .socialLinks {

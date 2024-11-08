@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import './JaguarModel.scss';
 import { Showroom } from '../../components/Showroom/Showroom';
 
@@ -12,7 +11,9 @@ export const JaguarModel: React.FC = () => {
   const closeModal = () => setIsOpen(false);
 
   useEffect(() => {
+
     // --------------------[SCENE]-------------------- //
+
     const container = document.createElement('div');
     container.className = 'jaguar-showroom';
     document.body.appendChild(container);
@@ -32,7 +33,9 @@ export const JaguarModel: React.FC = () => {
     const camera = new THREE.PerspectiveCamera(45, 150 / 75, 0.1, 1000);
     camera.position.set(0, 0.5, 2);
 
+
     // --------------------[LIGHTS]-------------------- //
+
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1.8);
     directionalLight.position.set(0, 5, 0);
     directionalLight.target.position.set(0, 0, 0);
@@ -58,7 +61,9 @@ export const JaguarModel: React.FC = () => {
     hemiLight.position.set(0, 5, 0);
     scene.add(hemiLight);
 
+
     // --------------------[LOADER]-------------------- //
+
     const loader = new GLTFLoader();
     loader.load(
       '/assets/models/Jaguar/scene.gltf',
@@ -95,17 +100,6 @@ export const JaguarModel: React.FC = () => {
       undefined,
       (error) => console.error('Erreur lors du chargement du modèle :', error)
     );
-
-    // --------------------[CONTROLS]-------------------- //
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enablePan = false;
-    controls.enableZoom = true;
-    controls.minDistance = 0.8;
-    controls.maxDistance = 3;
-    controls.maxPolarAngle = Math.PI / 3;
-    controls.minPolarAngle = Math.PI / 3;
-    controls.rotateSpeed = 0.075;
-    controls.update();
 
     // Ouvrir la modale au clic sur le conteneur
     container.onclick = openModal;

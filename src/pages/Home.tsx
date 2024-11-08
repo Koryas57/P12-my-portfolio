@@ -10,7 +10,6 @@ export const Home: React.FC = () => {
     return (
         <>
         <Navigation />
-        <h1>Showroom 3D Jaguar</h1>
             <JaguarModel/>
         <Footer />
         </>
