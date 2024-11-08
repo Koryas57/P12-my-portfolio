@@ -16,8 +16,7 @@ export const JaguarModel: React.FC = () => {
 
     const container = document.createElement('div');
     container.className = 'jaguar-showroom';
-    document.body?.appendChild(container);
-    ;
+    document.getElementById('carousel-cont')?.appendChild(container);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -70,7 +69,7 @@ export const JaguarModel: React.FC = () => {
       '/assets/models/Jaguar/scene.gltf',
       (gltf) => {
         const model = gltf.scene;
-        model.scale.set(10, 10, 10);
+        model.scale.set(8, 8, 8);
         model.rotation.x = Math.PI;
         model.rotation.z = Math.PI;
         model.rotation.y = Math.PI / 2;
@@ -108,7 +107,7 @@ export const JaguarModel: React.FC = () => {
     // Cleanup à la fin
     return () => {
       renderer.dispose();
-      document.body?.removeChild(container);
+      document.getElementById('carousel-cont')?.removeChild(container);
     };
   }, []);
 
