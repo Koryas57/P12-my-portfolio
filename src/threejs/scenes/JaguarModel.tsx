@@ -16,7 +16,8 @@ export const JaguarModel: React.FC = () => {
 
     const container = document.createElement('div');
     container.className = 'jaguar-showroom';
-    document.body.appendChild(container);
+    document.body?.appendChild(container);
+    ;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -107,7 +108,7 @@ export const JaguarModel: React.FC = () => {
     // Cleanup à la fin
     return () => {
       renderer.dispose();
-      document.body.removeChild(container);
+      document.body?.removeChild(container);
     };
   }, []);
 

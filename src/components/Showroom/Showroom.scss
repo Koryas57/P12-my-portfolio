@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; // Assurez-vous que la modale soit au-dessus du reste du contenu
+  z-index: 2000; // Assurez-vous que la modale soit au-dessus du reste du contenu
 }
 
 .modal-content {
