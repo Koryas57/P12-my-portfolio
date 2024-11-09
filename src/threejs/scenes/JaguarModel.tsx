@@ -15,10 +15,14 @@ export const JaguarModel: React.FC = () => {
     // --------------------[SCENE]-------------------- //
 
     const container = document.createElement('div');
+    const footer = document.querySelector('footer')
     container.className = 'jaguar-showroom';
-    document.getElementById('carousel-cont')?.appendChild(container);
+    footer?.appendChild(container);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({
+       antialias: true,
+       alpha: true
+      });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -28,7 +32,7 @@ export const JaguarModel: React.FC = () => {
     container.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xffffff);
+    scene.background = null;
 
     const camera = new THREE.PerspectiveCamera(45, 150 / 75, 0.1, 1000);
     camera.position.set(0, 0.5, 2);
@@ -107,7 +111,7 @@ export const JaguarModel: React.FC = () => {
     // Cleanup à la fin
     return () => {
       renderer.dispose();
-      document.getElementById('carousel-cont')?.removeChild(container);
+      footer?.removeChild(container);
     };
   }, []);
 

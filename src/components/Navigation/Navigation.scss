@@ -5,11 +5,11 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   position: sticky;
-  top: 0;
+  top: -2px;
   z-index: 1000;
   margin: 0 auto;
   padding: 2vh 0;
-  background-color: #1c1c1c;
+  background-color: #00000099;
   color: #ffffff;
   &-links {
     display: flex;
@@ -25,7 +25,7 @@
       line-height: 0.5rem;
       border-radius: 0.375rem;
       cursor: pointer;
-      transition: all 1s ease;
+      transition: all 0.75s ease;
       &:hover {
         background-color: #c4b5b59a;
         transform: scale(1.05);
