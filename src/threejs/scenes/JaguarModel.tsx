@@ -15,7 +15,7 @@ export const JaguarModel: React.FC = () => {
     // --------------------[SCENE]-------------------- //
 
     const container = document.createElement('div');
-    const footer = document.querySelector('footer')
+    const footer = document.querySelector('footer .logoContainer')
     container.className = 'jaguar-showroom';
     footer?.appendChild(container);
 
@@ -36,6 +36,8 @@ export const JaguarModel: React.FC = () => {
 
     const camera = new THREE.PerspectiveCamera(45, 150 / 75, 0.1, 1000);
     camera.position.set(0, 0.5, 2);
+    camera.position.y += 0.1; // Augmentez cette valeur pour monter la vue de la caméra
+    camera.lookAt(0, 0, 0); // Assurez-vous que la caméra est bien orientée vers le centre  de la scène
 
 
     // --------------------[LIGHTS]-------------------- //
@@ -73,7 +75,7 @@ export const JaguarModel: React.FC = () => {
       '/assets/models/Jaguar/scene.gltf',
       (gltf) => {
         const model = gltf.scene;
-        model.scale.set(8, 8, 8);
+        model.scale.set(15, 15, 15);
         model.rotation.x = Math.PI;
         model.rotation.z = Math.PI;
         model.rotation.y = Math.PI / 2;
@@ -96,7 +98,7 @@ export const JaguarModel: React.FC = () => {
         // Animation du modèle
         const animate = () => {
           requestAnimationFrame(animate);
-          model.rotation.y += 0.0025;
+          model.rotation.y += 0.0040;
           renderer.render(scene, camera);
         };
         animate();

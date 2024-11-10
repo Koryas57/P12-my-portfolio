@@ -1,10 +1,10 @@
 .jaguar-showroom {
-  width: 40vw;
-  max-width: 1980px;
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  margin: 0 auto;
+  width: 8vw;
+  height: 8vh;
+  position: relative;
+  bottom: 2px;
+  right: 0.5vw;
+  & canvas {
+    aspect-ratio: 16 / 9;
+  }
 }
