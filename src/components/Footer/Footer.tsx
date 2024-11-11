@@ -1,5 +1,7 @@
 // Footer.tsx
 import React from 'react';
+import { JaguarModel } from '../../threejs/scenes/JaguarModel';
+
 import './Footer.scss';
 
 type Technology = {
@@ -34,6 +36,7 @@ export const Footer: React.FC = () => {
             className="logo"
           />
         ))}
+        <JaguarModel />
       </div>
       <div className="socialLinks">
         <a href="https://github.com/tonprofil" target="_blank" rel="noopener noreferrer" className="link">

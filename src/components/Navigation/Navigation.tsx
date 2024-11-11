@@ -11,7 +11,7 @@ export const Navigation: React.FC = () => {
     return (
         <nav className='navigation'>
             <div className='navigation-links'>
-                <Link className='projects-list_link' to={'/ProjectsList'}>
+                <Link className='projects-list_link' to={'/projects'}>
                     Projects
                 </Link>
                 <Link className='skills-list_link' to={'/Skills'}>
