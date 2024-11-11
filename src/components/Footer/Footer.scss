@@ -1,10 +1,10 @@
 .footer {
+  width: 100%;
   background: rgba(42, 42, 42);
   color: #fff;
   text-align: center;
   margin: 0 auto;
   position: absolute;
-  width: 100%;
 }
 
 .logoContainer {
@@ -30,7 +30,7 @@
 }
 
 .socialLinks {
-  margin-bottom: 15px;
+  margin-bottom: 2vh;
 }
 
 .link {
@@ -40,12 +40,5 @@
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    position: absolute;
-    bottom: 0;
   }
 }

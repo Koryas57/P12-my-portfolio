@@ -17,7 +17,7 @@ export const Collapse: React.FC<CollapseProps> = ({ projectName, summary, skills
   return (
     <div className="collapse-container">
       <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
-        <h3>{projectName}</h3>
+        <h1>{projectName}</h1>
       </div>
       <div
         className="collapse-content-wrapper"

@@ -24,9 +24,11 @@ body {
 
 .projects-list {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2vh;
   max-width: 80vw;
-  margin: 0 auto;
+  margin: 5vh auto;
   padding: 20px;
 }
