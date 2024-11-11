@@ -1,20 +1,61 @@
 .navigation {
-  height: 3vh;
+  height: 7vh;
   width: 100%;
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
   position: sticky;
   top: -2px;
   z-index: 1000;
   margin: 0 auto;
-  padding: 2vh 0;
   background-color: #00000099;
   color: #ffffff;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+    background: linear-gradient(
+      135deg,
+      #16152500,
+      #426b7e00,
+      #24243e00,
+      rgb(162 195 211 / 45%),
+      #61717a33
+    );
+    background-size: 400% 400%;
+    border-radius: 12px;
+    text-decoration: none;
+    text-shadow: 2px 0 4px #000;
+    padding: 0.5rem 1.5rem;
+    margin: auto 2vw;
+    transition: all 0.8s ease;
+    animation: slideInBounce 2.5s cubic-bezier(0.25, 0.1, 0.28, 1.14) forwards,
+      gradientFlow 8s infinite linear;
+
+    h1 {
+      color: white;
+      text-shadow: 1px 1px 2px #333;
+      animation: textGlow 6s infinite alternate;
+    }
+
+    p {
+      color: black;
+      text-shadow: 1px 1px 2px #333;
+      animation: textGlowReversed 3s infinite alternate;
+    }
+
+    &:hover {
+      background: #81d4fa20;
+    }
+  }
+
   &-links {
     display: flex;
     justify-content: space-between;
-    & a {
+    padding: 2vh 0;
+
+    a {
       margin: 0 1.5vw;
       color: #000000;
       font-size: 14px;
@@ -26,22 +67,80 @@
       border-radius: 0.375rem;
       cursor: pointer;
       transition: all 0.1s ease;
+
       &:hover {
         background-color: #c4b5b59a;
         transform: scale(1.05);
       }
     }
+
     .projects-list_link {
       text-shadow: 0 0 1px white;
       background: rgba(255, 255, 255, 0.15);
       color: white;
     }
+
     .skills-list_link {
       background: #81d4fa;
+
       &:hover {
         background: #a9e4ff;
         transform: scale(1.05);
       }
     }
+  }
+}
+
+// Effet de gradient dynamique pour le fond
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Glow pour le texte
+@keyframes textGlow {
+  from {
+    color: #fff;
+    text-shadow: 1px 1px 3px #000000, 0 0 5px #66c3ff99, 0 0 3px #81d4fa99;
+  }
+  to {
+    color: #000;
+    text-shadow: 1px 1px 3px #ffffff, 0 0 5px #00b3ff, 0 0 3px #81d4fa99;
+  }
+}
+
+@keyframes textGlowReversed {
+  from {
+    color: #000;
+    text-shadow: 1px 1px 3px #ffffff, 0 0 5px #00b3ff, 0 0 3px #81d4fa99;
+  }
+  to {
+    color: #fff;
+    text-shadow: 1px 1px 3px #000000, 0 0 5px #66c3ff99, 0 0 3px #81d4fa99;
+  }
+}
+
+// Slide-in avec effet rebond
+@keyframes slideInBounce {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
