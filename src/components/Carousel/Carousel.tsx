@@ -1,28 +1,28 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './carousel.scss';
-import Image1 from '../../../public/assets/images/image1.png';
-import Image2 from '../../../public/assets/images/image2.png';
-import Image3 from '../../../public/assets/images/image3.png';
-import Image4 from '../../../public/assets/images/image4.png';
-import Image5 from '../../../public/assets/images/image5.png';
-import Image6 from '../../../public/assets/images/image6.png';
-// import Image7 from '../../../public/assets/images/image7.png';
-// import Image8 from '../../../public/assets/images/image8.jpg';
-// import Image9 from '../../../public/assets/images/image9.jpg';
-// import Image10 from '../../../public/assets/images/image10.jpg';
+import Image1 from '../../assets/images/image1.png';
+import Image2 from '../../assets/images/image2.png';
+import Image3 from '../../assets/images/image3.png';
+import Image4 from '../../assets/images/image4.png';
+import Image5 from '../../assets/images/image5.png';
+import Image6 from '../../assets/images/image6.png';
+import Image7 from '../../assets/images/image7.png';
+import Image8 from '../../assets/images/image8.png';
+import Image9 from '../../assets/images/image9.png';
+import Image10 from '../../assets/images/image10.png';
 
 // Tableau d'images en utilisant les imports
 const images = [
-  { id: 1, src: Image1, alt: 'Image 1' },
-  { id: 2, src: Image2, alt: 'Image 2' },
-  { id: 3, src: Image3, alt: 'Image 3' },
-  { id: 4, src: Image4, alt: 'Image 4' },
-  { id: 5, src: Image5, alt: 'Image 5' },
-  { id: 6, src: Image6, alt: 'Image 6' },
-  { id: 7, src: Image1, alt: 'Image 7' },
-  { id: 8, src: Image2, alt: 'Image 8' },
-  { id: 9, src: Image3, alt: 'Image 9' },
-  { id: 10, src: Image4, alt: 'Image 10' },
+  { id: 1, src: Image1, alt: 'Riding Cities' },
+  { id: 2, src: Image2, alt: 'Booki' },
+  { id: 3, src: Image3, alt: 'Ohmyfood' },
+  { id: 4, src: Image4, alt: 'Print-It' },
+  { id: 5, src: Image5, alt: 'Sophie Bluel Architecte d\'interieur' },
+  { id: 6, src: Image6, alt: 'Kasa' },
+  { id: 7, src: Image7, alt: 'Nina Carducci Photographe' },
+  { id: 8, src: Image8, alt: '724 Events' },
+  { id: 9, src: Image9, alt: 'Argent Bank' },
+  { id: 10, src: Image10, alt: 'Qwenta Project' },
 ];
 
 export const Carousel: React.FC = () => {
