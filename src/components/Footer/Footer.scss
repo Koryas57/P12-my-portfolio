@@ -12,6 +12,11 @@
   gap: 2vw;
   padding: 3vw 2vw 1vw;
   flex-wrap: wrap;
+  @media (max-width: 425px) {
+    justify-content: space-evenly;
+    gap: 10vw;
+    padding: 3vh 10vw 1vh;
+  }
 }
 
 .logo {
