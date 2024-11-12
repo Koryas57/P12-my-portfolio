@@ -4,7 +4,7 @@ import './ContactForm.scss';
 export const ContactForm: React.FC = () => {
   return (
     <form className="contact-form">
-      <h2 className="contact-title">Contactez moi</h2>
+      <h2 className="contact-title">Contactez-moi</h2>
       <label htmlFor="name">Nom</label>
       <input type="text" id="name" name="name" required />
       
