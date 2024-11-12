@@ -34,3 +34,17 @@ body {
   margin: 5vh auto;
   padding: 20px;
 }
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+
+  /* Responsive: Empile les sections sur petits écrans */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}

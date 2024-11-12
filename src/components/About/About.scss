@@ -1,33 +1,29 @@
 .about-container {
   padding: 2.5rem;
-  max-width: 900px;
-  margin: 2rem auto;
-  background: linear-gradient(135deg, #f3f4f6, #ffffff);
+  max-width: 60vw;
+  background: linear-gradient(300deg, #f3f4f6, #ffffff8f);
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 15s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  animation: fadeIn 5s ease;
+  text-align: center;
+  & img {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 3vh;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.6901960784);
   }
 }
 
 .about-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 5vh;
   text-align: center;
-  color: #333;
-  background: linear-gradient(90deg, #0078d4, #00b8d4);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  text-shadow: 4px 1px 10px rgba(255, 255, 255, 0.6901960784);
+  @media (max-width: 425px) {
+    font-size: 2rem;
+  }
 }
 
 .about-paragraph {
@@ -53,4 +49,15 @@
   background: linear-gradient(90deg, #0078d4, #00b8d4);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
