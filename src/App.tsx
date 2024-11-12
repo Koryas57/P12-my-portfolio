@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { ProjectsList } from './pages/ProjectList/ProjectsList';
-import { Skills } from './pages/Skills';
+import { Skills } from './pages/Skills/Skills';
 
 
 export const App: React.FC = () => {

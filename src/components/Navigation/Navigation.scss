@@ -31,7 +31,7 @@
     margin: auto 2vw;
     transition: all 0.8s ease;
     animation: slideInBounce 2.5s cubic-bezier(0.25, 0.1, 0.28, 1.14) forwards,
-      gradientFlow 8s infinite linear;
+      gradientFlow 11s cubic-bezier(0.19, 1, 0.22, 1) infinite;
 
     h1 {
       color: white;
@@ -112,14 +112,14 @@
   }
   to {
     color: #000;
-    text-shadow: 1px 1px 3px #ffffff, 0 0 5px #00b3ff, 0 0 3px #81d4fa99;
+    text-shadow: 1px 1px 3px #ffffff, 0 0 5px #81d4fa, 0 0 3px #81d4fa99;
   }
 }
 
 @keyframes textGlowReversed {
   from {
     color: #000;
-    text-shadow: 1px 1px 3px #ffffff, 0 0 5px #00b3ff, 0 0 3px #81d4fa99;
+    text-shadow: 1px 1px 3px #ffffff, 0 0 5px #81d4fa, 0 0 3px #81d4fa99;
   }
   to {
     color: #fff;

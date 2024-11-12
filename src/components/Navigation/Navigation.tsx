@@ -20,7 +20,7 @@ export const Navigation: React.FC = () => {
                 Projects
             </Link>
             <Link className='skills-list_link' to={'/Skills'}>
-                Skills details
+                Skills 
             </Link>
         </div>
     </nav>

@@ -21,6 +21,11 @@ const technologies: Technology[] = [
   { name: 'Redux', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg' },
   { name: 'Unreal Engine', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg' },
   { name: 'Three.js', url: 'https://raw.githubusercontent.com/mrdoob/three.js/dev/files/icon.svg' },
+  { name: 'Notion', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg' },
+  { name: 'Lighthouse', url: 'https://raw.githubusercontent.com/googlechrome/lighthouse/master/assets/lighthouse-logo.svg' },
+  { name: 'Photoshop', url: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
+  { name: 'Canva', url: 'https://cdn.worldvectorlogo.com/logos/canva-1.svg' },
+  { name: 'DaVinci Resolve', url: 'https://img.icons8.com/color/452/davinci-resolve.png' },
 ];
 
 export const Footer: React.FC = () => {
