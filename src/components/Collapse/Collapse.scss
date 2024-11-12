@@ -28,6 +28,11 @@
     );
     background-size: 300% 300%;
     animation: gradientShift 20s ease infinite;
+    & img {
+      filter: blur(0.5px) contrast(1.5);
+      transition: transform 0.3s ease;
+      opacity: 0.5;
+    }
 
     &:hover {
       background-color: transparent;
@@ -104,6 +109,10 @@
       align-items: center;
     }
   }
+}
+
+.arrow.rotate-up {
+  transform: rotate(180deg); /* Rotation vers le haut */
 }
 
 @keyframes gradientShift {
