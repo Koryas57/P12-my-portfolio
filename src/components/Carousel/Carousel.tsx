@@ -1,15 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './carousel.scss';
-import Image1 from '../../assets/images/image1.png';
-import Image2 from '../../assets/images/image2.png';
-import Image3 from '../../assets/images/image3.png';
-import Image4 from '../../assets/images/image4.png';
-import Image5 from '../../assets/images/image5.png';
-import Image6 from '../../assets/images/image6.png';
-import Image7 from '../../assets/images/image7.png';
-import Image8 from '../../assets/images/image8.png';
-import Image9 from '../../assets/images/image9.png';
-import Image10 from '../../assets/images/image10.png';
+import Image1 from '../../assets/images/image1.webp';
+import Image2 from '../../assets/images/image2.webp';
+import Image3 from '../../assets/images/image3.webp';
+import Image4 from '../../assets/images/image4.webp';
+import Image5 from '../../assets/images/image5.webp';
+import Image6 from '../../assets/images/image6.webp';
+import Image7 from '../../assets/images/image7.webp';
+import Image8 from '../../assets/images/image8.webp';
+import Image9 from '../../assets/images/image9.webp';
+import Image10 from '../../assets/images/image10.webp';
 
 // Tableau d'images en utilisant les imports
 const images = [
