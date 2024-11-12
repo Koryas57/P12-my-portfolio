@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.scss';
+import '../../assets/images/YassShanghai.webp'
 
 export const About: React.FC = () => {
   return (
