@@ -44,11 +44,11 @@ export const Footer: React.FC = () => {
         <JaguarModel />
       </div>
       <div className="socialLinks">
-        <a href="https://github.com/tonprofil" target="_blank" rel="noopener noreferrer" className="link">
-          GitHub
+        <a href="https://github.com/Koryas57" target="_blank" rel="noopener noreferrer" className="link">
+          🔗 GitHub
         </a>
-        <a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noopener noreferrer" className="link">
-          LinkedIn
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="link">
+          💼 LinkedIn
         </a>
       </div>
     </footer>

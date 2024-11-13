@@ -52,8 +52,8 @@ const projects: Projects[] = [
   },
   {
     projectName: 'Sophie Bluel Architecte d’intérieur',
-    summary: 'Développement d’une interface interactive en manipulant le DOM et en intégrant des écouteurs d\'événements pour des réponses dynamiques aux actions des utilisateurs. J\'ai également intégré des appels API pour la récupération de données en temps réel, documentés via Swagger. Ce projet m’a permis de développer une expertise dans la manipulation directe du DOM et la gestion des flux de données.',
-    skills: 'Maîtrise du DOM, Implémentation d\'événements dynamiques, Intégration d\'API REST avec Swagger',
+    summary: 'Développement d’une interface interactive en manipulant le DOM et en intégrant des écouteurs d\'événements pour des réponses dynamiques aux actions des utilisateurs. J\'ai également intégré des appels API pour la récupération de données en temps réel, documentés via Swagger. Ce projet m’a permis de développer une solide expérience dans la manipulation directe du DOM et la gestion des flux de données.',
+    skills: 'Solide expérience en manipulation du DOM, Implémentation d\'événements dynamiques, Intégration d\'API REST avec Swagger',
     imageSrc: SophieBluel,
     link: 'https://p6-sophie-bluel-9clq3hygl-yass-projects-886bacad.vercel.app/'
   },
@@ -80,14 +80,14 @@ const projects: Projects[] = [
   },
   {
     projectName: 'Argent Bank',
-    summary: 'Application avancée avec Redux pour la gestion de l’état et intégration d’API REST via Axios en TypeScript. J\'ai structuré l’architecture de l\'application en fonction des meilleures pratiques de Redux, permettant une gestion efficace des données. Ce projet m’a formé à la manipulation de données en temps réel et m’a permis de renforcer mes compétences en TypeScript et en intégration d’API.',
-    skills: 'Maîtrise avancée de Redux, Intégration d\'API REST sécurisée, Programmation TypeScript',
+    summary: 'Application avancée avec Redux pour la gestion de l’état et intégration d’API REST via Axios en TypeScript. J\'ai structuré l’architecture de l\'application en fonction des meilleures pratiques de Redux, permettant une gestion efficace des données via store.getState() par exemple. Ce projet m’a formé à la manipulation de données en temps réel et m’a permis de renforcer mes compétences en TypeScript et en intégration d’API.',
+    skills: 'Bases avancées de Redux, Intégration d\'API REST sécurisées, Programmation TypeScript',
     imageSrc: ArgentBank,
     link: ''
   },
   {
     projectName: 'Qwenta Project',
-    summary: 'Responsable de la rédaction des spécifications techniques d’un projet web, j\'ai dû décomposer les besoins fonctionnels du client en tâches concrètes pour le développement. Après avoir analysé les besoins clients puis proposé des solutions techinques, j\’ai également assuré la veille technologique ainsi que la mise en place d\'outils de gestion de projet, tels qu\'un Kanban via Notion, des topics Feedly, dans le but de partager des analyses et documents avec l’équipe pour garantir l\'alignement du projet. Ce projet m\'a permis de développer des compétences en gestion de projet et en communication technique, essentielles dans un environnement collaboratif.',
+    summary: 'Responsable de la rédaction des spécifications techniques d’un projet web, j\'ai dû décomposer les besoins fonctionnels du client en tâches concrètes pour le développement. Après avoir analysé les besoins clients puis proposé des solutions techniques, j\’ai également assuré la veille technologique ainsi que la mise en place d\'outils de gestion de projet, tels qu\'un Kanban via Notion, des topics Feedly, dans le but de partager des analyses et documents avec l’équipe pour garantir l\'alignement du projet. Ce projet m\'a permis de développer des compétences en gestion de projet et en communication technique, essentielles dans un environnement collaboratif.',
     skills: 'Spécifications techniques détaillées, Veille technologique, Kanban, Méthodologie Agile, Communication technique et veille stratégique',
     imageSrc: Qwenta,
     link: 'https://noiseless-year-64d.notion.site/63ce1afcaf56431aaf58e19d162263ae?v=e69df8cbb5fe4a07903b93af91596a26'
