@@ -6,7 +6,7 @@ export const About: React.FC = () => {
   return (
     <section className="about-container">
       <h1 className="about-title">À propos</h1>
-      <img src='src/assets/images/YassShanghai.webp' alt='Photo de Yacine Nezreg'/>
+      <img src="../../src/assets/images/YassShanghai.webp" alt="Photo de Yacine Nezreg"/>
       
       <p className="about-paragraph">
         Depuis mon plus jeune âge, l’informatique et les nouvelles technologies ont toujours été au cœur de mes intérêts. Dès mes premières années au collège, je me suis lancé dans l'exploration des systèmes d'exploitation, en expérimentant dans le BIOS de Windows, le terminal CMD, et divers logiciels de l’époque. Cette curiosité autodidacte m’a rapidement conduit aux bases du développement en C et C++, un défi à la hauteur de ma soif de connaissances, bien que limité par mon âge à l'époque. Mon rêve de rejoindre une entreprise innovante comme Square Enix pour contribuer au développement de jeux vidéo et à la création d’animations 3D n’a cessé de guider mes ambitions.
