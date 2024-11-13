@@ -29,6 +29,8 @@ const technologies: Technology[] = [
 ];
 
 export const Footer: React.FC = () => {
+
+
   return (
     <footer className="footer">
       <div className="logoContainer">
