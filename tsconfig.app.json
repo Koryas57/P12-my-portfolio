@@ -22,5 +22,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "animateTab.js"]
+  "include": ["src", "public/animateTab.js"]
 }

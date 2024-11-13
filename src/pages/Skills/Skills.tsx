@@ -42,6 +42,7 @@ export const Skills: React.FC = () => {
 
 
     return (
+
         <main className='main-layout'>
             <Navigation />
             <section className="skills-container">
