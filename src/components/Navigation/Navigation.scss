@@ -33,8 +33,8 @@
     animation: slideInBounce 2.5s cubic-bezier(0.25, 0.1, 0.28, 1.14) forwards,
       gradientFlow 11s cubic-bezier(0.19, 1, 0.22, 1) infinite;
     @media (max-width: 425px) {
-      margin-top: 1vh;
-      font-size: xx-small;
+      font-size: x-small;
+      gap: 0.25rem;
     }
 
     h1 {
