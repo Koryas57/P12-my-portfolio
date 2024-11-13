@@ -1,7 +1,7 @@
 // Liste des icônes à alterner pour l'animation du favicon
 let icons = [
-    '/src/assets/images/react-title_icon.png',
-    '/src/assets/images/react-blue_icon.png'
+    '/assets/images/react-title_icon.png',
+    '/assets/images/react-blue_icon.png'
 ];
 
 let iconIndex = 0;
