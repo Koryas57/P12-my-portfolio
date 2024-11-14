@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
         <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="link">
           💼 LinkedIn
         </a>
-        <p>©Copyright 2024 - 2025 Yacine Nezreg</p>
+        <p>Copyright© 2024 Yacine Nezreg. Tous droits réservés.</p>
       </div>
     </footer>
   );

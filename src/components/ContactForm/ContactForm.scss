@@ -14,7 +14,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    & img {
+
+    img {
       width: 35%;
       height: auto;
       @media (max-width: 768px) {
@@ -54,6 +55,10 @@
     &:focus {
       border-color: #0078d4;
     }
+  }
+
+  textarea {
+    min-height: 150px;
   }
 
   button {
