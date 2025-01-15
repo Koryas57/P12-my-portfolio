@@ -6,14 +6,14 @@ export const About: React.FC = () => {
   return (
     <section className="about-container">
       <h1 className="about-title">À propos</h1>
-      <img src={ProfilePic} alt="Photo de Yacine Nezreg"/>
-      
+      <img src={ProfilePic} alt="Photo de Yacine Nezreg" />
+
       <p className="about-paragraph">
-        Passioné depuis toujours par les technologies et l'informatique. Très jeune, je me suis interessé au fonctionnement des systèmes d'exploitations et explorais les bases de la programmation en C et C++ grâce aux cours sur le Site du Zero. Mon parcours m’a amené à travailler dans divers secteurs, notamment celui de la restauration, où j’ai découvert l'importance de la diversité culturelle et de la créativité. Aujourd'hui, je m’investis pleinement dans le développement web, motivé par la création d'expériences numériques interactives et captivantes.
+        Passionné depuis toujours par les technologies et l'informatique. Très jeune, je me suis intéressé au fonctionnement des systèmes d'exploitations et explorais les bases de la programmation en C et C++ grâce aux cours sur le Site du Zero. Mon parcours m’a amené à travailler dans divers secteurs, notamment celui de la restauration, où j’ai découvert l'importance de la diversité culturelle et de la créativité. Aujourd'hui, je m’investis pleinement dans le développement web, motivé par la création d'expériences numériques interactives et captivantes.
       </p>
 
       <p className="about-paragraph">
-        Cette année, j'ai poursuivi une formation d'intégrateur web chez OpenClassrooms, acquérant une solide maîtrise des technologies front-end, de l’intégration de maquettes aux animations avancées. Les projets que je présente témoignent de mon engagement envers l'innovation et la qualité.
+        Cette année, j'ai poursuivi une formation de développeur web chez OpenClassrooms, acquérant une solide maîtrise des technologies front-end, de l’intégration de maquettes aux animations avancées. Les projets que je présente témoignent de mon engagement envers l'innovation et la qualité.
       </p>
 
       <p className="about-paragraph highlight">
