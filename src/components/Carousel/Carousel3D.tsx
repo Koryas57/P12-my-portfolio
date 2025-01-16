@@ -29,10 +29,25 @@ export const Carousel3D: React.FC = () => {
   const totalImages = images.length;
   const stepAngle = 360 / totalImages;
 
+  // Configure l'URL pour le reflet dynamiquement
+  useEffect(() => {
+    const items = document.querySelectorAll('.carousel3d-item a');
+
+    items.forEach((item) => {
+      const anchor = item as HTMLAnchorElement; // Cast explicite
+      const img = anchor.querySelector('img') as HTMLImageElement;
+      if (img) {
+        const url = img.src; // Récupère l'URL de l'image
+        anchor.style.setProperty('--image-url', `url(${url})`);
+      }
+    });
+  }, []);
+
+  // Gestion de la rotation automatique
   useEffect(() => {
     const interval = setInterval(() => {
       setAngle((prevAngle) => prevAngle + stepAngle); // Rotation automatique
-    }, 5000);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, [stepAngle]);
@@ -52,9 +67,11 @@ export const Carousel3D: React.FC = () => {
                 transform: `rotateY(${theta}deg) translateZ(30rem)`,
               }}
             >
-              <a href={image.link} target="_blank" rel="noopener noreferrer">
-                <img src={image.src} alt={image.alt} />
-              </a>
+              <div className="card-content">
+                <a href={image.link} target="_blank" rel="noopener noreferrer">
+                  <img src={image.src} alt={image.alt} />
+                </a>
+              </div>
             </div>
           );
         })}
