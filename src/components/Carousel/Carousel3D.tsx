@@ -27,7 +27,8 @@ const images = [
 export const Carousel3D: React.FC = () => {
   const [angle, setAngle] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false); // Ajout pour gérer la pause après interaction
+  const [isPaused, setIsPaused] = useState(false);
+  const [translateZ, setTranslateZ] = useState('30rem'); // Dynamique pour gérer la responsivité
   const totalImages = images.length;
   const stepAngle = 360 / totalImages;
 
@@ -44,20 +45,60 @@ export const Carousel3D: React.FC = () => {
     });
   }, []);
 
+  // Gestion dynamique de la distance Z
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth <= 368) {
+        setTranslateZ('8rem');
+      } else if (screenWidth <= 390) {
+        setTranslateZ('9rem');
+      } else if (screenWidth <= 500) {
+        setTranslateZ('10rem');
+      } else if (screenWidth <= 525) {
+        setTranslateZ('11rem');
+      } else if (screenWidth <= 620) {
+        setTranslateZ('13rem');
+      } else if (screenWidth <= 690) {
+        setTranslateZ('15rem');
+      } else if (screenWidth <= 790) {
+        setTranslateZ('16rem');
+      } else if (screenWidth <= 830) {
+        setTranslateZ('18rem');
+      } else if (screenWidth <= 920) {
+        setTranslateZ('20rem');
+      } else if (screenWidth <= 970) {
+        setTranslateZ('21rem');
+      } else if (screenWidth <= 1080) {
+        setTranslateZ('22rem');
+      } else if (screenWidth <= 1180) {
+        setTranslateZ('26rem');
+      } else {
+        setTranslateZ('28rem');
+      }
+    };
+
+    handleResize(); // Initialisation
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Gestion de la rotation automatique
   useEffect(() => {
-    if (isPaused) return; // Arrête la rotation automatique si elle est en pause
+    if (isPaused) return;
 
     const interval = setInterval(() => {
       handleRotation('right');
-    }, 3000); // Rotation automatique toutes les 5 secondes
+    }, 3900);
 
     return () => clearInterval(interval);
   }, [isPaused]);
 
   // Gère la rotation et la pause automatique
   const handleRotation = (direction: 'left' | 'right') => {
-    setIsPaused(true); // Met en pause l'auto-rotation
+    setIsPaused(true);
 
     setAngle((prev) =>
       direction === 'left' ? prev - stepAngle : prev + stepAngle
@@ -68,7 +109,6 @@ export const Carousel3D: React.FC = () => {
         : (prev + 1) % totalImages
     );
 
-    // Reprend l'auto-rotation après 5 secondes
     setTimeout(() => {
       setIsPaused(false);
     }, 5000);
@@ -93,7 +133,7 @@ export const Carousel3D: React.FC = () => {
               key={image.id}
               className={`carousel3d-item ${isActive ? 'active' : ''}`}
               style={{
-                transform: `rotateY(${theta}deg) translateZ(30rem)`,
+                transform: `rotateY(${theta}deg) translateZ(${translateZ})`,
               }}
             >
               <div className="card-content">
@@ -111,9 +151,8 @@ export const Carousel3D: React.FC = () => {
       >
         ›
       </button>
-      {/* Barre de pagination avec vague */}
+      {/* Barre de pagination */}
       <div className="pagination-bar">
-        <div className="pagination-wave"></div>
         {images.map((_, index) => (
           <div
             key={index}
