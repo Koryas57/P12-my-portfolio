@@ -26,18 +26,19 @@ const images = [
 
 export const Carousel3D: React.FC = () => {
   const [angle, setAngle] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false); // Ajout pour gérer la pause après interaction
   const totalImages = images.length;
   const stepAngle = 360 / totalImages;
 
   // Configure l'URL pour le reflet dynamiquement
   useEffect(() => {
     const items = document.querySelectorAll('.carousel3d-item a');
-
     items.forEach((item) => {
-      const anchor = item as HTMLAnchorElement; // Cast explicite
+      const anchor = item as HTMLAnchorElement;
       const img = anchor.querySelector('img') as HTMLImageElement;
       if (img) {
-        const url = img.src; // Récupère l'URL de l'image
+        const url = img.src;
         anchor.style.setProperty('--image-url', `url(${url})`);
       }
     });
@@ -45,19 +46,47 @@ export const Carousel3D: React.FC = () => {
 
   // Gestion de la rotation automatique
   useEffect(() => {
+    if (isPaused) return; // Arrête la rotation automatique si elle est en pause
+
     const interval = setInterval(() => {
-      setAngle((prevAngle) => prevAngle + stepAngle); // Rotation automatique
-    }, 3500);
+      handleRotation('right');
+    }, 3000); // Rotation automatique toutes les 5 secondes
 
     return () => clearInterval(interval);
-  }, [stepAngle]);
+  }, [isPaused]);
+
+  // Gère la rotation et la pause automatique
+  const handleRotation = (direction: 'left' | 'right') => {
+    setIsPaused(true); // Met en pause l'auto-rotation
+
+    setAngle((prev) =>
+      direction === 'left' ? prev - stepAngle : prev + stepAngle
+    );
+    setCurrentIndex((prev) =>
+      direction === 'left'
+        ? (prev - 1 + totalImages) % totalImages
+        : (prev + 1) % totalImages
+    );
+
+    // Reprend l'auto-rotation après 5 secondes
+    setTimeout(() => {
+      setIsPaused(false);
+    }, 5000);
+  };
 
   return (
     <div className="carousel3d-container">
+      {/* Flèches de navigation */}
+      <button
+        className="carousel-control left"
+        onClick={() => handleRotation('left')}
+      >
+        ‹
+      </button>
       <div className="carousel3d" style={{ transform: `rotateY(${-angle}deg)` }}>
         {images.map((image, index) => {
           const theta = stepAngle * index;
-          const isActive = index === Math.round(angle / stepAngle) % totalImages;
+          const isActive = index === currentIndex;
 
           return (
             <div
@@ -75,6 +104,23 @@ export const Carousel3D: React.FC = () => {
             </div>
           );
         })}
+      </div>
+      <button
+        className="carousel-control right"
+        onClick={() => handleRotation('right')}
+      >
+        ›
+      </button>
+      {/* Barre de pagination avec vague */}
+      <div className="pagination-bar">
+        <div className="pagination-wave"></div>
+        {images.map((_, index) => (
+          <div
+            key={index}
+            className={`pagination-segment ${index === currentIndex ? 'active' : ''
+              }`}
+          ></div>
+        ))}
       </div>
     </div>
   );

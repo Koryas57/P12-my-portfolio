@@ -24,7 +24,7 @@ const technologies: Technology[] = [
   { name: 'Notion', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg' },
   { name: 'Lighthouse', url: 'https://raw.githubusercontent.com/googlechrome/lighthouse/master/assets/lighthouse-logo.svg' },
   { name: 'Photoshop', url: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
-  { name: 'Canva', url: 'https://cdn.worldvectorlogo.com/logos/canva-1.svg' },
+  { name: 'Canva', url: 'https://www.edigitalagency.com.au/wp-content/uploads/Canva-icon-gradient-png-300x300.png' },
   { name: 'DaVinci Resolve', url: 'https://img.icons8.com/color/452/davinci-resolve.png' },
 ];
 
@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
         <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="link">
           💼 LinkedIn
         </a>
-        <p>Copyright© 2024 Yacine Nezreg. Tous droits réservés.</p>
+        <p>Copyright© 2025 Yacine Nezreg. Tous droits réservés.</p>
       </div>
     </footer>
   );
