@@ -1,9 +1,9 @@
 .about-container {
   padding: 2.5rem;
   max-width: 60vw;
-  background: linear-gradient(300deg, #f3f4f6, #ffffff8f);
+  background: linear-gradient(300deg, rgba(255, 255, 255, 0.25), #000e2b0e);
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: -5px 0 5px rgb(33, 30, 30);
   animation: fadeIn 5s ease;
   text-align: center;
   & img {
@@ -16,11 +16,11 @@
 
 .about-title {
   font-size: 2.5rem;
-  color: black;
+  color: rgb(255, 255, 255);
   margin-bottom: 5vh;
   text-align: center;
   font-weight: 600;
-  text-shadow: 4px 1px 10px rgba(255, 255, 255, 0.6901960784);
+  text-shadow: 4px 1px 10px rgba(0, 0, 0, 0.69);
   @media (max-width: 425px) {
     font-size: 2rem;
   }
@@ -29,13 +29,13 @@
 .about-paragraph {
   font-size: 1.2rem;
   line-height: 1.7;
-  color: #444;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   text-align: justify;
   transition: color 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    color: #222;
+    color: #ffffff;
     transform: translateX(5px);
   }
 }
@@ -43,10 +43,10 @@
 .highlight {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #0078d4;
+  color: #ffffff;
   text-align: center;
   padding-top: 1rem;
-  background: linear-gradient(90deg, #0078d4, #00b8d4);
+  background: #81d4fa;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
