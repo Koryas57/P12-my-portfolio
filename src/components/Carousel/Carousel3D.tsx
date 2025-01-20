@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image1 from '../../assets/images/image1.webp';
 import Image2 from '../../assets/images/image2.webp';
 import Image3 from '../../assets/images/image3.webp';
@@ -28,7 +28,8 @@ export const Carousel3D: React.FC = () => {
   const [angle, setAngle] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [translateZ, setTranslateZ] = useState('30rem'); // Dynamique pour gérer la responsivité
+  const [translateZ, setTranslateZ] = useState('30rem'); // Gérer la responsivité
+  const startX = useRef<number | null>(null); // Gestion du swipe
   const totalImages = images.length;
   const stepAngle = 360 / totalImages;
 
@@ -50,7 +51,7 @@ export const Carousel3D: React.FC = () => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
 
-      if (screenWidth <= 368) {
+      if (screenWidth <= 335) {
         setTranslateZ('8rem');
       } else if (screenWidth <= 390) {
         setTranslateZ('9rem');
@@ -96,7 +97,24 @@ export const Carousel3D: React.FC = () => {
     return () => clearInterval(interval);
   }, [isPaused]);
 
-  // Gère la rotation et la pause automatique
+  // Gestion du swipe pour mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    startX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (startX.current === null) return;
+
+    const endX = e.changedTouches[0].clientX;
+    const deltaX = endX - startX.current;
+
+    if (deltaX > 50) handleRotation('left');
+    if (deltaX < -50) handleRotation('right');
+
+    startX.current = null;
+  };
+
+  // Gestion des rotations
   const handleRotation = (direction: 'left' | 'right') => {
     setIsPaused(true);
 
@@ -115,7 +133,11 @@ export const Carousel3D: React.FC = () => {
   };
 
   return (
-    <div className="carousel3d-container">
+    <div
+      className="carousel3d-container"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Flèches de navigation */}
       <button
         className="carousel-control left"
@@ -158,6 +180,10 @@ export const Carousel3D: React.FC = () => {
             key={index}
             className={`pagination-segment ${index === currentIndex ? 'active' : ''
               }`}
+            onClick={() => {
+              setAngle(index * stepAngle);
+              setCurrentIndex(index);
+            }}
           ></div>
         ))}
       </div>

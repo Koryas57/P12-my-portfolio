@@ -52,21 +52,21 @@
   a::after {
     content: "";
     position: absolute;
-    top: 124%; /* Place le reflet juste sous l'image */
+    top: 124%;
     left: -13%;
     width: 125%;
     height: 100%;
     background-image: var(--image-url);
     background-size: cover;
     background-position: center;
-    filter: opacity(0.3) blur(3px); /* Transparence et flou pour le reflet */
-    z-index: -1; /* Place le reflet derrière */
-    border-radius: 8px; /* Respecte le radius de l'image principale */
-    transition: transform 1s ease, opacity 1s ease; /* Transition fluide */
+    filter: opacity(0.3) blur(3px);
+    z-index: -1;
+    border-radius: 8px;
+    transition: transform 1s ease, opacity 1s ease;
   }
 
   &:not(.active) {
-    opacity: 1; /* Images non actives plus transparentes */
+    opacity: 1;
 
     a::after {
       transform: scaleY(-1) scale(0.8);
@@ -84,8 +84,7 @@
       transition: all ease-in-out;
     }
     a img {
-      box-shadow: 0 0 30px rgb(190 234 255), 0 0 60px rgb(129 212 250);
-      filter: brightness(1.1); /* Mise en lumière */
+      box-shadow: 0 0 10px rgb(0, 0, 0), 0 0 10px rgb(255, 255, 255);
       transform: scale(1.05) rotateY(1turn) translateY(20px); /* Mise en avant légère */
     }
     a::after {
@@ -111,11 +110,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
 
   &.left {
     left: 20px;
@@ -142,7 +136,7 @@
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
   margin: 0 2px;
-  transition: background 0.3s ease;
+  transition: background 3s ease;
   border-radius: 150px 0;
 
   &.active {
@@ -188,6 +182,10 @@
     width: 180px;
     height: 250px;
   }
+
+  .carousel3d-item.active a::after {
+    top: 105%;
+  }
 }
 
 @media (max-width: 790px) {
@@ -202,7 +200,12 @@
   }
 
   .carousel3d-item.active a img {
-    transform: scale(1.2) rotateY(1turn);
+    transform: scale(1.75) rotateY(1turn);
+  }
+
+  .carousel3d-item.active a::after {
+    transform: scaleY(-1) scale(1.38) rotateY(1turn);
+    top: 160%;
   }
 }
 
@@ -216,9 +219,17 @@
     width: 130px;
     height: 210px;
   }
+
+  .carousel3d-item.active a::after {
+    top: 162%;
+  }
 }
 
 @media (max-width: 576px) {
+  .carousel3d-container {
+    height: 81vh;
+  }
+
   .carousel3d {
     width: 140px;
     height: 220px;
@@ -235,10 +246,6 @@
     width: 120px;
     height: 200px;
   }
-
-  .carousel3d-item.active a img {
-    transform: scale(1.35) rotateY(1turn);
-  }
 }
 
 @media (max-width: 390px) {
@@ -250,10 +257,6 @@
   .carousel3d-item {
     width: 100px;
     height: 150px;
-  }
-
-  .carousel3d-item.active a img {
-    transform: scale(1.5) rotateY(1turn);
   }
 }
 
