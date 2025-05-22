@@ -7,7 +7,7 @@ let icons = [
 let iconIndex = 0;
 
 // Texte du titre avec espaces insécables pour effet de boucle
-let titleText = "Bienvenue sur mon Portfolio !\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\💻\u00A0\🌐\u00A0\🧑‍💻\u00A0\u00A0\u00A0\u00A0\u00A0";
+let titleText = "Bienvenue sur mon Portfolio !\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\🧑‍💻\u00A0\u00A0";
 let scrollIndex = 0;
 
 // Fonction pour animer le favicon
@@ -30,4 +30,4 @@ function animateTitle() {
 
 // Appel des fonctions d'animation
 setInterval(animateFavicon, 875);  // Change l'icône toutes les 500 ms
-setInterval(animateTitle, 200);    // Défilement continu du titre toutes les 200 ms
+setInterval(animateTitle, 85);    // Défilement continu du titre toutes les 200 ms
